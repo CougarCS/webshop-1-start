@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{student_name}}'s site</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            font-family: arial, sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            color: #333;
+        }
+
+        nav {
+            background-color: white;
+            overflow: hidden;
+            align-self: self-end;
+            padding: 0 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .dog-image {
+            display: block;
+            max-height: 250px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/dogs">Dogs</a>
+    </nav>
+
+    <div class="container">
+        <h2>dog</h2>
+        <img src="{{dog_url}}" alt="dog pic" class="dog-image" />
+    </div>
+</body>
+
+</html>

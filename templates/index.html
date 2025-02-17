@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{student_name}}'s site</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            font-family: arial, sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            color: #333;
+        }
+
+        nav {
+            background-color: white;
+            overflow: hidden;
+            align-self: self-end;
+            padding: 0 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .profile-image {
+            display: block;
+            max-height: 250px;
+            width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .me-section {
+            background: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#about">Home</a>
+    </nav>
+
+    <div class="container">
+        <div id="about">
+            <h2>you can put your name here haha</h2>
+
+            <img src="/static/bliss.png" alt="YOU CAN PUT YOUR NAME HERE" class="profile-image" />
+
+            <p>Hello! I'm <span style="text-decoration: underline;">(your name)</span>, a passionate software
+                engineer with a love for creating engaging web experiences. I
+                enjoy
+                learning new tech
+                and applying them to solve real-world problems. When I'm not coding, you can find me reading, hiking, or
+                exploring new places.</p>
+        </div>
+
+        <div id="fun-facts" class="me-section">
+            <h2>fun fax</h2>
+
+            <ul class="facts-list">
+                {% for fact in facts %}
+                <li>{{fact}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="links" class="me-section">
+            <h2>linx</h2>
+            <p>
+                You can chat with me on <a href="https://www.instagram.com/seesjays/">Instagram,</a> connect with me on
+                <a href="https://www.linkedin.com/in/chrisoh431">LinkedIn,</a> or check out my code on <a
+                    href="https://github.com/seesjays">GitHub!</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
