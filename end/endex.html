@@ -30,12 +30,27 @@
 
         /* Selects all elements that are children of the body, and sets their text color */
         body * {
-            color: #777;
+            color: #000;
         }
 
         h1 {
-            border-bottom: 2px solid #333;
+            color: hsl(133, 52%, 50%);
+            border-bottom: 2px solid hsl(133, 52%, 50%);
             padding-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 2rem;
+        }
+
+        #fun-facts h2 {
+            color: hsl(232, 52%, 50%);
+            border-bottom: 2px solid hsl(232, 52%, 50%);
+        }
+
+        #links h2 {
+            color: hsl(0, 52%, 50%);
+            border-bottom: 2px solid hsl(0, 52%, 50%);
         }
 
         nav {
@@ -84,13 +99,14 @@
 <body>
     <nav>
         <a href="/">Home</a>
+        <a href="/dogs">Dogs</a>
     </nav>
 
     <div class="container">
         <div id="about">
-            <h1>you can put your name here haha</h1>
+            <h1>{{student_name}}</h1>
 
-            <img src="/static/bliss.png" alt="YOU CAN PUT YOUR NAME HERE" class="profile-image" />
+            <img src="/static/sunset.jpg" alt="Sunset" class="profile-image" />
 
             <p>Hello! I'm <span style="text-decoration: underline;">(your name)</span>, a passionate software
                 engineer with a love for creating engaging web experiences. I

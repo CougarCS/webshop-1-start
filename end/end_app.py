@@ -20,9 +20,7 @@ def index():
 
 @app.route("/dogs")
 def dogs():
-    response = requests.get("https://dog.ceo/api/breeds/image/random")
-    dog_url = response.json()["message"]
-    return render_template("dogs.html", student_name=name, dog_url=dog_url)
+    # dog API link https://dog.ceo/api/breeds/image/random
 
 
 if __name__ == "__main__":
